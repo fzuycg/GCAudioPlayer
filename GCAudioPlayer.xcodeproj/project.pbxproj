@@ -1,0 +1,488 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8548DCA2501EFF7002298AD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548DC92501EFF7002298AD /* AppDelegate.m */; };
+		C8548DD02501EFF7002298AD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548DCF2501EFF7002298AD /* ViewController.m */; };
+		C8548DD32501EFF7002298AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8548DD12501EFF7002298AD /* Main.storyboard */; };
+		C8548DD52501EFFB002298AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8548DD42501EFFB002298AD /* Assets.xcassets */; };
+		C8548DD82501EFFB002298AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8548DD62501EFFB002298AD /* LaunchScreen.storyboard */; };
+		C8548DDB2501EFFB002298AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548DDA2501EFFB002298AD /* main.m */; };
+		C8548E4C2501F251002298AD /* XHToast.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E402501F251002298AD /* XHToast.m */; };
+		C8548E4D2501F251002298AD /* UIButton+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E412501F251002298AD /* UIButton+Style.m */; };
+		C8548E4E2501F251002298AD /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E472501F251002298AD /* UIImage+ImageEffects.m */; };
+		C8548E4F2501F251002298AD /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E482501F251002298AD /* Common.m */; };
+		C8548E502501F251002298AD /* AutoScrollLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E4A2501F251002298AD /* AutoScrollLabel.m */; };
+		C8548E532501F28A002298AD /* UIColor+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E512501F28A002298AD /* UIColor+Addition.m */; };
+		C8548E5725020FEA002298AD /* GCAudioPlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E5625020FEA002298AD /* GCAudioPlayViewController.m */; };
+		C8548E5A2502102B002298AD /* GCAudioPlayNarrowView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E592502102B002298AD /* GCAudioPlayNarrowView.m */; };
+		C8548E5D25021081002298AD /* GCAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E5C25021081002298AD /* GCAudioPlayer.m */; };
+		C8548E60250210BE002298AD /* GCAudioPlayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E5F250210BE002298AD /* GCAudioPlayManager.m */; };
+		C8548E63250210FD002298AD /* GCAudioPlayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E62250210FD002298AD /* GCAudioPlayModel.m */; };
+		C8548E67250215CA002298AD /* GCPlayProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E66250215CA002298AD /* GCPlayProgressView.m */; };
+		C8548E6A2502161B002298AD /* GCAudioPlayOpration.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E692502161B002298AD /* GCAudioPlayOpration.m */; };
+		C8548E6D25021652002298AD /* GCAudioPlayListView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E6C25021652002298AD /* GCAudioPlayListView.m */; };
+		C8548E7025021686002298AD /* GCAudioPlayRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E6F25021686002298AD /* GCAudioPlayRateView.m */; };
+		C8548E73250216D6002298AD /* GCAudioPlayTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E72250216D6002298AD /* GCAudioPlayTimeView.m */; };
+		C8548E762502174E002298AD /* GCAudioPlayKVOManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E752502174E002298AD /* GCAudioPlayKVOManager.m */; };
+		C8548E7925021788002298AD /* GCAudioPlayListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E7825021788002298AD /* GCAudioPlayListCell.m */; };
+		C8548E7B25022686002298AD /* AudioResource.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8548E7A25022686002298AD /* AudioResource.plist */; };
+		C8548E8025022A4D002298AD /* UIView+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E7F25022A4D002298AD /* UIView+Addtion.m */; };
+		C8548E832505C436002298AD /* GCCoverImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E822505C436002298AD /* GCCoverImageView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C8548DC52501EFF7002298AD /* GCAudioPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCAudioPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8548DC82501EFF7002298AD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C8548DC92501EFF7002298AD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C8548DCE2501EFF7002298AD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C8548DCF2501EFF7002298AD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C8548DD22501EFF7002298AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8548DD42501EFFB002298AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8548DD72501EFFB002298AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8548DD92501EFFB002298AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8548DDA2501EFFB002298AD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C8548E402501F251002298AD /* XHToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHToast.m; sourceTree = "<group>"; };
+		C8548E412501F251002298AD /* UIButton+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Style.m"; sourceTree = "<group>"; };
+		C8548E422501F251002298AD /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		C8548E432501F251002298AD /* XHToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHToast.h; sourceTree = "<group>"; };
+		C8548E442501F251002298AD /* AutoScrollLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutoScrollLabel.h; sourceTree = "<group>"; };
+		C8548E452501F251002298AD /* UIButton+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Style.h"; sourceTree = "<group>"; };
+		C8548E462501F251002298AD /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		C8548E472501F251002298AD /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		C8548E482501F251002298AD /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
+		C8548E4A2501F251002298AD /* AutoScrollLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutoScrollLabel.m; sourceTree = "<group>"; };
+		C8548E512501F28A002298AD /* UIColor+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Addition.m"; sourceTree = "<group>"; };
+		C8548E522501F28A002298AD /* UIColor+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Addition.h"; sourceTree = "<group>"; };
+		C8548E5525020FEA002298AD /* GCAudioPlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayViewController.h; sourceTree = "<group>"; };
+		C8548E5625020FEA002298AD /* GCAudioPlayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayViewController.m; sourceTree = "<group>"; };
+		C8548E582502102B002298AD /* GCAudioPlayNarrowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayNarrowView.h; sourceTree = "<group>"; };
+		C8548E592502102B002298AD /* GCAudioPlayNarrowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayNarrowView.m; sourceTree = "<group>"; };
+		C8548E5B25021081002298AD /* GCAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayer.h; sourceTree = "<group>"; };
+		C8548E5C25021081002298AD /* GCAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayer.m; sourceTree = "<group>"; };
+		C8548E5E250210BE002298AD /* GCAudioPlayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayManager.h; sourceTree = "<group>"; };
+		C8548E5F250210BE002298AD /* GCAudioPlayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayManager.m; sourceTree = "<group>"; };
+		C8548E61250210FD002298AD /* GCAudioPlayModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayModel.h; sourceTree = "<group>"; };
+		C8548E62250210FD002298AD /* GCAudioPlayModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayModel.m; sourceTree = "<group>"; };
+		C8548E64250214CF002298AD /* GCConstantMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCConstantMacro.h; sourceTree = "<group>"; };
+		C8548E65250215CA002298AD /* GCPlayProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCPlayProgressView.h; sourceTree = "<group>"; };
+		C8548E66250215CA002298AD /* GCPlayProgressView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCPlayProgressView.m; sourceTree = "<group>"; };
+		C8548E682502161B002298AD /* GCAudioPlayOpration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayOpration.h; sourceTree = "<group>"; };
+		C8548E692502161B002298AD /* GCAudioPlayOpration.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayOpration.m; sourceTree = "<group>"; };
+		C8548E6B25021652002298AD /* GCAudioPlayListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayListView.h; sourceTree = "<group>"; };
+		C8548E6C25021652002298AD /* GCAudioPlayListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayListView.m; sourceTree = "<group>"; };
+		C8548E6E25021686002298AD /* GCAudioPlayRateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayRateView.h; sourceTree = "<group>"; };
+		C8548E6F25021686002298AD /* GCAudioPlayRateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayRateView.m; sourceTree = "<group>"; };
+		C8548E71250216D6002298AD /* GCAudioPlayTimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayTimeView.h; sourceTree = "<group>"; };
+		C8548E72250216D6002298AD /* GCAudioPlayTimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayTimeView.m; sourceTree = "<group>"; };
+		C8548E742502174E002298AD /* GCAudioPlayKVOManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayKVOManager.h; sourceTree = "<group>"; };
+		C8548E752502174E002298AD /* GCAudioPlayKVOManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayKVOManager.m; sourceTree = "<group>"; };
+		C8548E7725021788002298AD /* GCAudioPlayListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioPlayListCell.h; sourceTree = "<group>"; };
+		C8548E7825021788002298AD /* GCAudioPlayListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioPlayListCell.m; sourceTree = "<group>"; };
+		C8548E7A25022686002298AD /* AudioResource.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = AudioResource.plist; sourceTree = "<group>"; };
+		C8548E7E25022A4D002298AD /* UIView+Addtion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Addtion.h"; sourceTree = "<group>"; };
+		C8548E7F25022A4D002298AD /* UIView+Addtion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addtion.m"; sourceTree = "<group>"; };
+		C8548E812505C436002298AD /* GCCoverImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCCoverImageView.h; sourceTree = "<group>"; };
+		C8548E822505C436002298AD /* GCCoverImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCCoverImageView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8548DC22501EFF7002298AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8548DBC2501EFF7002298AD = {
+			isa = PBXGroup;
+			children = (
+				C8548DC72501EFF7002298AD /* GCAudioPlayer */,
+				C8548DC62501EFF7002298AD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8548DC62501EFF7002298AD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8548DC52501EFF7002298AD /* GCAudioPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8548DC72501EFF7002298AD /* GCAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C8548E5425020F4B002298AD /* GCAudioPlayer */,
+				C8548DC82501EFF7002298AD /* AppDelegate.h */,
+				C8548DC92501EFF7002298AD /* AppDelegate.m */,
+				C8548DCE2501EFF7002298AD /* ViewController.h */,
+				C8548DCF2501EFF7002298AD /* ViewController.m */,
+				C8548E7A25022686002298AD /* AudioResource.plist */,
+				C8548DD12501EFF7002298AD /* Main.storyboard */,
+				C8548DD42501EFFB002298AD /* Assets.xcassets */,
+				C8548DD62501EFFB002298AD /* LaunchScreen.storyboard */,
+				C8548DD92501EFFB002298AD /* Info.plist */,
+				C8548DDA2501EFFB002298AD /* main.m */,
+			);
+			path = GCAudioPlayer;
+			sourceTree = "<group>";
+		};
+		C8548DE42501F205002298AD /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C8548E522501F28A002298AD /* UIColor+Addition.h */,
+				C8548E512501F28A002298AD /* UIColor+Addition.m */,
+				C8548E442501F251002298AD /* AutoScrollLabel.h */,
+				C8548E4A2501F251002298AD /* AutoScrollLabel.m */,
+				C8548E462501F251002298AD /* Common.h */,
+				C8548E482501F251002298AD /* Common.m */,
+				C8548E452501F251002298AD /* UIButton+Style.h */,
+				C8548E412501F251002298AD /* UIButton+Style.m */,
+				C8548E422501F251002298AD /* UIImage+ImageEffects.h */,
+				C8548E472501F251002298AD /* UIImage+ImageEffects.m */,
+				C8548E7E25022A4D002298AD /* UIView+Addtion.h */,
+				C8548E7F25022A4D002298AD /* UIView+Addtion.m */,
+				C8548E432501F251002298AD /* XHToast.h */,
+				C8548E402501F251002298AD /* XHToast.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C8548E5425020F4B002298AD /* GCAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				C8548E5E250210BE002298AD /* GCAudioPlayManager.h */,
+				C8548E5F250210BE002298AD /* GCAudioPlayManager.m */,
+				C8548E5525020FEA002298AD /* GCAudioPlayViewController.h */,
+				C8548E5625020FEA002298AD /* GCAudioPlayViewController.m */,
+				C8548E582502102B002298AD /* GCAudioPlayNarrowView.h */,
+				C8548E592502102B002298AD /* GCAudioPlayNarrowView.m */,
+				C8548E812505C436002298AD /* GCCoverImageView.h */,
+				C8548E822505C436002298AD /* GCCoverImageView.m */,
+				C8548E65250215CA002298AD /* GCPlayProgressView.h */,
+				C8548E66250215CA002298AD /* GCPlayProgressView.m */,
+				C8548E6B25021652002298AD /* GCAudioPlayListView.h */,
+				C8548E6C25021652002298AD /* GCAudioPlayListView.m */,
+				C8548E6E25021686002298AD /* GCAudioPlayRateView.h */,
+				C8548E6F25021686002298AD /* GCAudioPlayRateView.m */,
+				C8548E71250216D6002298AD /* GCAudioPlayTimeView.h */,
+				C8548E72250216D6002298AD /* GCAudioPlayTimeView.m */,
+				C8548E7725021788002298AD /* GCAudioPlayListCell.h */,
+				C8548E7825021788002298AD /* GCAudioPlayListCell.m */,
+				C8548E61250210FD002298AD /* GCAudioPlayModel.h */,
+				C8548E62250210FD002298AD /* GCAudioPlayModel.m */,
+				C8548E5B25021081002298AD /* GCAudioPlayer.h */,
+				C8548E5C25021081002298AD /* GCAudioPlayer.m */,
+				C8548E682502161B002298AD /* GCAudioPlayOpration.h */,
+				C8548E692502161B002298AD /* GCAudioPlayOpration.m */,
+				C8548E742502174E002298AD /* GCAudioPlayKVOManager.h */,
+				C8548E752502174E002298AD /* GCAudioPlayKVOManager.m */,
+				C8548E64250214CF002298AD /* GCConstantMacro.h */,
+				C8548DE42501F205002298AD /* Tools */,
+			);
+			path = GCAudioPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8548DC42501EFF7002298AD /* GCAudioPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8548DDE2501EFFB002298AD /* Build configuration list for PBXNativeTarget "GCAudioPlayer" */;
+			buildPhases = (
+				C8548DC12501EFF7002298AD /* Sources */,
+				C8548DC22501EFF7002298AD /* Frameworks */,
+				C8548DC32501EFF7002298AD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GCAudioPlayer;
+			productName = GCAudioPlayer;
+			productReference = C8548DC52501EFF7002298AD /* GCAudioPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8548DBD2501EFF7002298AD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = com.yangcg.learn;
+				TargetAttributes = {
+					C8548DC42501EFF7002298AD = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = C8548DC02501EFF7002298AD /* Build configuration list for PBXProject "GCAudioPlayer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8548DBC2501EFF7002298AD;
+			productRefGroup = C8548DC62501EFF7002298AD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8548DC42501EFF7002298AD /* GCAudioPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8548DC32501EFF7002298AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8548DD82501EFFB002298AD /* LaunchScreen.storyboard in Resources */,
+				C8548DD52501EFFB002298AD /* Assets.xcassets in Resources */,
+				C8548DD32501EFF7002298AD /* Main.storyboard in Resources */,
+				C8548E7B25022686002298AD /* AudioResource.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8548DC12501EFF7002298AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8548E7025021686002298AD /* GCAudioPlayRateView.m in Sources */,
+				C8548E4E2501F251002298AD /* UIImage+ImageEffects.m in Sources */,
+				C8548DD02501EFF7002298AD /* ViewController.m in Sources */,
+				C8548E60250210BE002298AD /* GCAudioPlayManager.m in Sources */,
+				C8548E4D2501F251002298AD /* UIButton+Style.m in Sources */,
+				C8548DCA2501EFF7002298AD /* AppDelegate.m in Sources */,
+				C8548E4C2501F251002298AD /* XHToast.m in Sources */,
+				C8548E832505C436002298AD /* GCCoverImageView.m in Sources */,
+				C8548E73250216D6002298AD /* GCAudioPlayTimeView.m in Sources */,
+				C8548E67250215CA002298AD /* GCPlayProgressView.m in Sources */,
+				C8548E502501F251002298AD /* AutoScrollLabel.m in Sources */,
+				C8548E63250210FD002298AD /* GCAudioPlayModel.m in Sources */,
+				C8548E5D25021081002298AD /* GCAudioPlayer.m in Sources */,
+				C8548E6A2502161B002298AD /* GCAudioPlayOpration.m in Sources */,
+				C8548E4F2501F251002298AD /* Common.m in Sources */,
+				C8548E8025022A4D002298AD /* UIView+Addtion.m in Sources */,
+				C8548E6D25021652002298AD /* GCAudioPlayListView.m in Sources */,
+				C8548E5A2502102B002298AD /* GCAudioPlayNarrowView.m in Sources */,
+				C8548E762502174E002298AD /* GCAudioPlayKVOManager.m in Sources */,
+				C8548DDB2501EFFB002298AD /* main.m in Sources */,
+				C8548E7925021788002298AD /* GCAudioPlayListCell.m in Sources */,
+				C8548E5725020FEA002298AD /* GCAudioPlayViewController.m in Sources */,
+				C8548E532501F28A002298AD /* UIColor+Addition.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C8548DD12501EFF7002298AD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8548DD22501EFF7002298AD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C8548DD62501EFFB002298AD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8548DD72501EFFB002298AD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8548DDC2501EFFB002298AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C8548DDD2501EFFB002298AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8548DDF2501EFFB002298AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = XP242N85BR;
+				INFOPLIST_FILE = GCAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangcg.learn.GCAudioPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DevProvision;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8548DE02501EFFB002298AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = XP242N85BR;
+				INFOPLIST_FILE = GCAudioPlayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yangcg.learn.GCAudioPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = DevProvision;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8548DC02501EFF7002298AD /* Build configuration list for PBXProject "GCAudioPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8548DDC2501EFFB002298AD /* Debug */,
+				C8548DDD2501EFFB002298AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8548DDE2501EFFB002298AD /* Build configuration list for PBXNativeTarget "GCAudioPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8548DDF2501EFFB002298AD /* Debug */,
+				C8548DE02501EFFB002298AD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8548DBD2501EFF7002298AD /* Project object */;
+}
