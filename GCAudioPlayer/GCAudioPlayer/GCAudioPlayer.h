@@ -72,6 +72,8 @@ typedef NS_OPTIONS(NSUInteger, ICPlayerLoadState) {
 //播放结束回调
 @property (nonatomic, copy, nullable) void(^playerDidToEnd)(id object);
 
++ (GCAudioPlayer *)sharedPlayer;
+
 //初始化
 - (instancetype)initWithAudioModel:(GCAudioPlayModel *)model;
 

@@ -69,12 +69,12 @@
 }
 
 - (void)changeStyleBtnAction {
-    if (_playerStyle == CFTAudioPlayerStyle_list) {
-        self.playerStyle = CFTAudioPlayerStyle_cyclic;
-    } else if (_playerStyle == CFTAudioPlayerStyle_cyclic) {
-        self.playerStyle = CFTAudioPlayerStyle_random;
-    } else if (_playerStyle == CFTAudioPlayerStyle_random) {
-        self.playerStyle = CFTAudioPlayerStyle_list;
+    if (_playerStyle == CGYAudioPlayerStyle_list) {
+        self.playerStyle = CGYAudioPlayerStyle_cyclic;
+    } else if (_playerStyle == CGYAudioPlayerStyle_cyclic) {
+        self.playerStyle = CGYAudioPlayerStyle_random;
+    } else if (_playerStyle == CGYAudioPlayerStyle_random) {
+        self.playerStyle = CGYAudioPlayerStyle_list;
     }
     
     if (self.playerStyleBlock) self.playerStyleBlock(_playerStyle);
@@ -96,15 +96,15 @@
     [self setStatueWithAllData:self.allListModelArray currentIndex:_currentSelectIndex];
 }
 
-- (void)setPlayerStyle:(CFTAudioPlayerStyle)playerStyle {
+- (void)setPlayerStyle:(CGYAudioPlayerStyle)playerStyle {
     _playerStyle = playerStyle;
-    if (_playerStyle == CFTAudioPlayerStyle_list) {
+    if (_playerStyle == CGYAudioPlayerStyle_list) {
         _playStyleLabel.text = @"列表播放";
         _styleImageView.image = [UIImage imageNamed:@"audioPlayer_shunxu_2"];
-    } else if (_playerStyle == CFTAudioPlayerStyle_cyclic) {
+    } else if (_playerStyle == CGYAudioPlayerStyle_cyclic) {
         _playStyleLabel.text = @"单曲循环";
         _styleImageView.image = [UIImage imageNamed:@"audioPlayer_xunhuan_2"];
-    } else if (_playerStyle == CFTAudioPlayerStyle_random) {
+    } else if (_playerStyle == CGYAudioPlayerStyle_random) {
         _playStyleLabel.text = @"随机播放";
         _styleImageView.image = [UIImage imageNamed:@"audioPlayer_suiji_2"];
     }

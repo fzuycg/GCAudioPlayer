@@ -441,7 +441,7 @@
     [Common updataTimerLableWithLable:_endTime Second:currentModel.audioLength];
     
     //上一首，下一首，更新定时显示
-    if(self.selectTimeZone == CFTTimingType_currentEnd)[self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:currentModel];
+    if(self.selectTimeZone == CGYTimingType_currentEnd)[self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:currentModel];
 }
 
 - (void)setCurrentProgress:(NSTimeInterval)currentProgress {
@@ -474,20 +474,20 @@
 - (void)setClockTime:(NSInteger)clockTime {
     _clockTime = clockTime;
     //当选择10分钟以上定时，由外部管理定时不需要重新计算
-    if (self.selectTimeZone != CFTTimingType_currentEnd && self.selectTimeZone != CFTTimingType_noOpen) return;
+    if (self.selectTimeZone != CGYTimingType_currentEnd && self.selectTimeZone != CGYTimingType_noOpen) return;
     NSString *timeS = _clockTime > 0 ? [Common updataTimerLableWithSecond:_clockTime] : @"定时关闭";
     [_timeBtn setTitle:timeS forState:UIControlStateNormal];
     [_timeBtn layoutButtonWithEdgeInsetsStyle:ICButtonEdgeInsetsStyleTop imageTitleSpace:2];
 }
-- (void)setPlayerStyle:(CFTAudioPlayerStyle)playerStyle {
+- (void)setPlayerStyle:(CGYAudioPlayerStyle)playerStyle {
     _playerStyle = playerStyle;
-    if (playerStyle == CFTAudioPlayerStyle_list) {
+    if (playerStyle == CGYAudioPlayerStyle_list) {
         [self.cyclicBtn setTitle:@"顺序播放" forState:UIControlStateNormal];
         [self.cyclicBtn setImage:[UIImage imageNamed:@"audioPlayer_shunxu_1"] forState:UIControlStateNormal];
-    } else if (playerStyle == CFTAudioPlayerStyle_cyclic) {
+    } else if (playerStyle == CGYAudioPlayerStyle_cyclic) {
         [self.cyclicBtn setTitle:@"循环播放" forState:UIControlStateNormal];
         [self.cyclicBtn setImage:[UIImage imageNamed:@"audioPlayer_xunhuan_1"] forState:UIControlStateNormal];
-    } else if (playerStyle == CFTAudioPlayerStyle_random) {
+    } else if (playerStyle == CGYAudioPlayerStyle_random) {
         [self.cyclicBtn setTitle:@"随机播放" forState:UIControlStateNormal];
         [self.cyclicBtn setImage:[UIImage imageNamed:@"audioPlayer_suiji_1"] forState:UIControlStateNormal];
     }
@@ -512,7 +512,7 @@
     }
 }
 
-- (void)setSelectTimeZone:(CFTTimingType)selectTimeZone {
+- (void)setSelectTimeZone:(CGYTimingType)selectTimeZone {
     _selectTimeZone = selectTimeZone;
     self.timingSelectView.timingType = selectTimeZone;
 }
@@ -533,7 +533,7 @@
     
 }
 
-#pragma mark - CIBShareDelegate
+#pragma mark - CGYShareDelegate
 -(void)actionType:(NSString *)type data:(NSString *)dateStr {
     
 }
@@ -554,7 +554,7 @@
         }
         [self playListMaskViewTapAction];
     };
-    _playListView.playerStyleBlock = ^(CFTAudioPlayerStyle playerStyle) {
+    _playListView.playerStyleBlock = ^(CGYAudioPlayerStyle playerStyle) {
         @strongify(self)
         self.playerStyle = playerStyle;
         if (self.playerStyleBlock) self.playerStyleBlock(playerStyle);
@@ -574,18 +574,18 @@
 /// 切换播放方式按钮点击事件
 - (void)_cyclicBtnAction {
     //切换播放方式
-    if (_playerStyle == CFTAudioPlayerStyle_list) {
+    if (_playerStyle == CGYAudioPlayerStyle_list) {
         [_cyclicBtn setTitle:@"单曲循环" forState:UIControlStateNormal];
         [_cyclicBtn setImage:[UIImage imageNamed:@"audioPlayer_xunhuan_1"] forState:UIControlStateNormal];
-        _playerStyle = CFTAudioPlayerStyle_cyclic;
-    } else if (_playerStyle == CFTAudioPlayerStyle_cyclic) {
+        _playerStyle = CGYAudioPlayerStyle_cyclic;
+    } else if (_playerStyle == CGYAudioPlayerStyle_cyclic) {
         [_cyclicBtn setTitle:@"随机播放" forState:UIControlStateNormal];
         [_cyclicBtn setImage:[UIImage imageNamed:@"audioPlayer_suiji_1"] forState:UIControlStateNormal];
-        _playerStyle = CFTAudioPlayerStyle_random;
-    } else if (_playerStyle == CFTAudioPlayerStyle_random) {
+        _playerStyle = CGYAudioPlayerStyle_random;
+    } else if (_playerStyle == CGYAudioPlayerStyle_random) {
         [_cyclicBtn setTitle:@"列表播放" forState:UIControlStateNormal];
         [_cyclicBtn setImage:[UIImage imageNamed:@"audioPlayer_shunxu_1"] forState:UIControlStateNormal];
-        _playerStyle = CFTAudioPlayerStyle_list;
+        _playerStyle = CGYAudioPlayerStyle_list;
     }
     
     if (self.playerStyleBlock) self.playerStyleBlock(_playerStyle);
@@ -594,7 +594,7 @@
 - (void)_timingBtnAction {
     _timingSelectMaskView.hidden = NO;
     @weakify(self)
-    _timingSelectView.timingBlock = ^(CFTTimingType timingType) {
+    _timingSelectView.timingBlock = ^(CGYTimingType timingType) {
         @strongify(self)
         NSLog(@"选择定时关闭方式 %ld", (long)timingType);
         [self timingSelectMaskViewTapAction];
@@ -651,7 +651,7 @@
     }
     if (self.seekProgress) self.seekProgress(_currentProgress);
     //设置完进度后更新时间
-    if(self.selectTimeZone == CFTTimingType_currentEnd) [self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:self.currentModel];
+    if(self.selectTimeZone == CGYTimingType_currentEnd) [self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:self.currentModel];
 }
 - (void)_advanceBtnAction {
     //快进
@@ -662,7 +662,7 @@
     }
     if (self.seekProgress) self.seekProgress(_currentProgress);
     //设置完进度后更新时间
-    if(self.selectTimeZone == CFTTimingType_currentEnd) [self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:self.currentModel];
+    if(self.selectTimeZone == CGYTimingType_currentEnd) [self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:self.currentModel];
 }
 - (void)_playBtnAction:(UIButton *)button {
     //播放、暂停
@@ -697,7 +697,7 @@
     self.currentProgress = slider.value;
     if (self.seekProgress) self.seekProgress(slider.value);
     //设置完进度后更新时间
-    if(self.selectTimeZone == CFTTimingType_currentEnd) [self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:self.currentModel];
+    if(self.selectTimeZone == CGYTimingType_currentEnd) [self computationTimeDisplayTimeLableWithSelectZone:self.selectTimeZone NewModel:self.currentModel];
 }
 #pragma mark - 选择定时时间
 - (void)updataTimeShowWithCurrentTime:(NSInteger)time {
@@ -710,30 +710,30 @@
     [_timeBtn layoutButtonWithEdgeInsetsStyle:ICButtonEdgeInsetsStyleTop imageTitleSpace:4];
 }
 #pragma mark - private
-- (void)computationTimeDisplayTimeLableWithSelectZone:(CFTTimingType)zone NewModel:(GCAudioPlayModel *)model{
+- (void)computationTimeDisplayTimeLableWithSelectZone:(CGYTimingType)zone NewModel:(GCAudioPlayModel *)model{
     //计算时间
-    self.clockTime = (zone == CFTTimingType_noOpen) ? 0 : [self totleTimeClockWithType:zone CurrentModel:model];
+    self.clockTime = (zone == CGYTimingType_noOpen) ? 0 : [self totleTimeClockWithType:zone CurrentModel:model];
     if(self.currentClockTime) self.currentClockTime(self.clockTime,zone);
 }
 
 //计算定时
-- (NSInteger)totleTimeClockWithType:(CFTTimingType)type CurrentModel:(GCAudioPlayModel *)model {
+- (NSInteger)totleTimeClockWithType:(CGYTimingType)type CurrentModel:(GCAudioPlayModel *)model {
     NSInteger clockSum = 0;
     
     switch (type) {
-        case CFTTimingType_noOpen:
+        case CGYTimingType_noOpen:
             clockSum = 0;
             break;
-        case CFTTimingType_currentEnd:
+        case CGYTimingType_currentEnd:
             clockSum = model.audioLength - self.currentProgress;
             break;
-        case CFTTimingType_oneMoment:
+        case CGYTimingType_oneMoment:
             clockSum = 15*60;
             break;
-        case CFTTimingType_twoMoment:
+        case CGYTimingType_twoMoment:
             clockSum = 30*60;
             break;
-        case CFTTimingType_fourMoment:
+        case CGYTimingType_fourMoment:
             clockSum = 60*60;
             break;
         default:

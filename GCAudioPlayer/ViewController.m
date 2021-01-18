@@ -36,6 +36,7 @@
         model.audioLength = 300;
         model.audioAuthor = dic[@"audioSinger"];
         model.audioAlbum = dic[@"audioAlbum"];
+        model.audioLyrics = dic[@"audioLyric"];
         [self.infoModelArray addObject:model];
     }
     

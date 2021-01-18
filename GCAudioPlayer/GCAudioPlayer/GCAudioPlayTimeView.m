@@ -19,7 +19,7 @@
 {
     self = [super init];
     if (self) {
-        _timingType = CFTTimingType_noOpen;
+        _timingType = CGYTimingType_noOpen;
         _timingArray = @[@"未开启", @"播完当前", @"15分钟", @"30分钟", @"60分钟"];
         _buttonArray = [NSMutableArray arrayWithCapacity:_timingArray.count];
         [self createUI];
@@ -74,7 +74,7 @@
 
 #pragma mark - setter
 
-- (void)setTimingType:(CFTTimingType)timingType {
+- (void)setTimingType:(CGYTimingType)timingType {
     _timingType = timingType;
     for (int i=0; i<_timingArray.count; i++) {
         UIButton *rateButton = _buttonArray[i];

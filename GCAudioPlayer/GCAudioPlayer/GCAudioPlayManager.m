@@ -31,13 +31,13 @@
 
 @property (nonatomic, assign) BOOL isEndPlay;       //是否刚结束播放
 
-@property (nonatomic, assign) CFTTimingType timeZone; //定时关闭方式
+@property (nonatomic, assign) CGYTimingType timeZone; //定时关闭方式
 
 @property (nonatomic, assign) NSInteger orderPlayNum;        //正常顺序播放歌曲数
 
 @property (nonatomic, strong) CXCallObserver *callCenter;
 
-@property (nonatomic, assign) CFTAudioPlayerStyle playerStyle;  //播放模式
+@property (nonatomic, assign) CGYAudioPlayerStyle playerStyle;  //播放模式
 @property (nonatomic, assign) CGFloat rate;                     //播放速率
 
 @end
@@ -69,7 +69,7 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(audioInterruption:) name:AVAudioSessionInterruptionNotification object:nil];
         [self initAudioActionManager];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeAudioPlayer) name:@"CFTAudioPlayerStopNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(closeAudioPlayer) name:@"CGYAudioPlayerStopNotification" object:nil];
     }
     return self;
 }
@@ -192,7 +192,7 @@
     //播放
     [_currentAudioPlayer play];
     //有定时重新计时
-    if(self.timerSeconds > 0 && self.timeZone == CFTTimingType_currentEnd) self.timerSeconds = [self totleTimeClockWithType:self.timeZone CurrentModel:self.currentPlayModel];
+    if(self.timerSeconds > 0 && self.timeZone == CGYTimingType_currentEnd) self.timerSeconds = [self totleTimeClockWithType:self.timeZone CurrentModel:self.currentPlayModel];
     if (!(_narrowView.showState == ViewShow || _narrowView.showState == ViewRight)) {
         [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseOut animations:^{
             self.narrowView.top =  self->_playViewY;
@@ -221,7 +221,7 @@
     [_currentAudioPlayer playAudioWithModel:_currentPlayModel PlayStatue:self.isRunning];
     [_currentAudioPlayer play];
     //有定时重新计时
-    if(self.timerSeconds > 0 && self.timeZone == CFTTimingType_currentEnd) self.timerSeconds = [self totleTimeClockWithType:self.timeZone CurrentModel:self.currentPlayModel];
+    if(self.timerSeconds > 0 && self.timeZone == CGYTimingType_currentEnd) self.timerSeconds = [self totleTimeClockWithType:self.timeZone CurrentModel:self.currentPlayModel];
     //展示UI
     if (statue == ViewFull) {
         [UIView animateWithDuration:0.5 delay:0 usingSpringWithDamping:0.7 initialSpringVelocity:10 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -246,13 +246,13 @@
 
 //播放下一首
 - (void)playNextAudio {
-    if (_playerStyle == CFTAudioPlayerStyle_cyclic || _playAudioArray.count == 1) {
+    if (_playerStyle == CGYAudioPlayerStyle_cyclic || _playAudioArray.count == 1) {
         [_currentAudioPlayer replay];
         self.fullScreenVC.isPlaying = YES;
         return;
-    }else if (_playerStyle == CFTAudioPlayerStyle_list) {
+    }else if (_playerStyle == CGYAudioPlayerStyle_list) {
         _currentPlayModel = [_oprationPlay getNextModel];
-    }else if (_playerStyle == CFTAudioPlayerStyle_random) {
+    }else if (_playerStyle == CGYAudioPlayerStyle_random) {
         _currentPlayModel = [_oprationPlay getNextRandomModel];
     }
     
@@ -272,7 +272,7 @@
 
 //播放上一首
 - (void)playFormerAudio {
-    if (_playerStyle == CFTAudioPlayerStyle_cyclic || _playAudioArray.count == 1) {
+    if (_playerStyle == CGYAudioPlayerStyle_cyclic || _playAudioArray.count == 1) {
         [_currentAudioPlayer replay];
         self.fullScreenVC.isPlaying = YES;
         return;
@@ -298,7 +298,7 @@
         [_currentAudioPlayer pause];
         if (self.fullScreenVC != nil)self.fullScreenVC.isPlaying = NO;
         //停止计时
-        if (self.timeZone == CFTTimingType_currentEnd) [self deallocTimer];
+        if (self.timeZone == CGYTimingType_currentEnd) [self deallocTimer];
     }
 }
 
@@ -384,29 +384,29 @@
     self.fullScreenVC.currentProgress = self.currentAudioPlayer.currentTime;
     self.fullScreenVC.totleTime = self.currentPlayModel.audioLength;
     self.fullScreenVC.shareArray = self.shareArray;
-    self.fullScreenVC.selectTimeZone = self.timerSeconds > 0 ? self.timeZone : CFTTimingType_noOpen;
+    self.fullScreenVC.selectTimeZone = self.timerSeconds > 0 ? self.timeZone : CGYTimingType_noOpen;
     if(self.timerSeconds > 0) self.fullScreenVC.clockTime = self.timerSeconds;
     //最后处理model，
     self.fullScreenVC.currentModel = model;
 }
 
 //计算定时
-- (NSInteger)totleTimeClockWithType:(CFTTimingType)type CurrentModel:(GCAudioPlayModel *)model{
+- (NSInteger)totleTimeClockWithType:(CGYTimingType)type CurrentModel:(GCAudioPlayModel *)model{
     NSInteger clockSum = 0;
     switch (type) {
-        case CFTTimingType_noOpen:
+        case CGYTimingType_noOpen:
             clockSum = 0;
             break;
-        case CFTTimingType_currentEnd:
+        case CGYTimingType_currentEnd:
             clockSum = model.audioLength - self.currentAudioPlayer.currentTime;
             break;
-        case CFTTimingType_oneMoment:
+        case CGYTimingType_oneMoment:
             clockSum = 15*60;
             break;
-        case CFTTimingType_twoMoment:
+        case CGYTimingType_twoMoment:
             clockSum = 30*60;
             break;
-        case CFTTimingType_fourMoment:
+        case CGYTimingType_fourMoment:
             clockSum = 60*60;
             break;
         default:
@@ -418,10 +418,10 @@
 //播放结束
 - (void)timeOverPlayStop {
     [XHToast showToastVieWiththContent:@"播放已结束"];
-    self.timeZone = CFTTimingType_noOpen;
+    self.timeZone = CGYTimingType_noOpen;
     self.timerSeconds = 0;
     self.orderPlayNum = 0;
-    self.fullScreenVC.selectTimeZone = CFTTimingType_noOpen;
+    self.fullScreenVC.selectTimeZone = CGYTimingType_noOpen;
     self.fullScreenVC.clockTime = 0;
     self.fullScreenVC.overPlayNum = 0;
     //定时器到时间
@@ -533,10 +533,10 @@
         @strongify(self)
         //播放下一首
         self.isEndPlay = YES;
-        if (self.timeZone == CFTTimingType_currentEnd) self.orderPlayNum += 1;
-        if (self.oprationPlay.isLastData && self.playerStyle == CFTAudioPlayerStyle_list) {
+        if (self.timeZone == CGYTimingType_currentEnd) self.orderPlayNum += 1;
+        if (self.oprationPlay.isLastData && self.playerStyle == CGYAudioPlayerStyle_list) {
             //已经是最后一首
-            if (self.timeZone != CFTTimingType_currentEnd && self.timeZone != CFTTimingType_currentEnd) {
+            if (self.timeZone != CGYTimingType_currentEnd && self.timeZone != CGYTimingType_currentEnd) {
                 [XHToast showToastVieWiththContent:@"播放已结束"];
                 [self pausePlay];
             }else {
@@ -689,7 +689,7 @@
 #pragma mark - fullScreenVCCallbcak
 - (void)fullScreenVCCallbcak {
     @weakify(self)
-    self.fullScreenVC.closeBtnAction = ^(GCAudioPlayModel * _Nonnull currentModel, NSTimeInterval seconds, CFTTimingType selectTimeZone,BOOL isPlaying) {
+    self.fullScreenVC.closeBtnAction = ^(GCAudioPlayModel * _Nonnull currentModel, NSTimeInterval seconds, CGYTimingType selectTimeZone,BOOL isPlaying) {
         @strongify(self)
         //处理显示
         self.currentPlayModel = currentModel;
@@ -700,13 +700,13 @@
         self.timeZone = selectTimeZone;
     };
 
-    self.fullScreenVC.formerBtnAction = ^(CFTTimingType selectTimeZone){
+    self.fullScreenVC.formerBtnAction = ^(CGYTimingType selectTimeZone){
         @strongify(self)
         //上一首
         self.timeZone = selectTimeZone;
         [self playFormerAudio];
     };
-    self.fullScreenVC.nextBtnAction = ^(CFTTimingType selectTimeZone) {
+    self.fullScreenVC.nextBtnAction = ^(CGYTimingType selectTimeZone) {
         @strongify(self)
         //下一首
         self.timeZone = selectTimeZone;
@@ -734,19 +734,19 @@
         @strongify(self)
         [self beginPlayTagAudioWithIndex:currentSelectPlayListIndex NarrowViewStatue:self.narrowView.showState];
     };
-    self.fullScreenVC.currentClockTime = ^(NSTimeInterval seconds,CFTTimingType selectzon) {
+    self.fullScreenVC.currentClockTime = ^(NSTimeInterval seconds,CGYTimingType selectzon) {
         @strongify(self)
         //选择新的定时，把之前记录已播完的音乐去除
         if(self.timeZone != selectzon)self.orderPlayNum = 0;
         //记录选择定时下标、区域
         self.timeZone = selectzon;
-        if (selectzon == CFTTimingType_noOpen) {
+        if (selectzon == CGYTimingType_noOpen) {
             self.timerSeconds = 0;
             [self.fullScreenVC updataTimeShowWithCurrentTime:self.timerSeconds];
             [self deallocTimer];
         }else {
             self.timerSeconds = seconds;
-            if (!self.isPlaying && selectzon == CFTTimingType_currentEnd) {
+            if (!self.isPlaying && selectzon == CGYTimingType_currentEnd) {
                 //选择第一段而且暂停播放，此时不计时
                 [self deallocTimer];
                 [self.fullScreenVC updataTimeShowWithCurrentTime:seconds];
@@ -769,7 +769,7 @@
             [self.delegate bottomBtnClick:button Model:model];
         }
     };
-    self.fullScreenVC.playerStyleBlock = ^(CFTAudioPlayerStyle playerStyle) {
+    self.fullScreenVC.playerStyleBlock = ^(CGYAudioPlayerStyle playerStyle) {
         @strongify(self)
         self.playerStyle = playerStyle;
     };

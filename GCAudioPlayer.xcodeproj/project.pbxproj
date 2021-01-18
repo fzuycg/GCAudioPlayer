@@ -34,6 +34,21 @@
 		C8548E7B25022686002298AD /* AudioResource.plist in Resources */ = {isa = PBXBuildFile; fileRef = C8548E7A25022686002298AD /* AudioResource.plist */; };
 		C8548E8025022A4D002298AD /* UIView+Addtion.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E7F25022A4D002298AD /* UIView+Addtion.m */; };
 		C8548E832505C436002298AD /* GCCoverImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = C8548E822505C436002298AD /* GCCoverImageView.m */; };
+		C86FE34425086C2400F150BB /* 梦涵-17岁.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33625086C2300F150BB /* 梦涵-17岁.lrc */; };
+		C86FE34525086C2400F150BB /* 徐良-321对不起.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33725086C2300F150BB /* 徐良-321对不起.lrc */; };
+		C86FE34625086C2400F150BB /* 九块钱-颓.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33825086C2300F150BB /* 九块钱-颓.lrc */; };
+		C86FE34725086C2400F150BB /* 权志龙-MISSING YOU.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33925086C2300F150BB /* 权志龙-MISSING YOU.lrc */; };
+		C86FE34825086C2400F150BB /* 莫文蔚-慢慢喜欢你.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33A25086C2300F150BB /* 莫文蔚-慢慢喜欢你.lrc */; };
+		C86FE34925086C2400F150BB /* en-嚣张.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33B25086C2300F150BB /* en-嚣张.lrc */; };
+		C86FE34A25086C2400F150BB /* 许嵩(Vae)-有何不可.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33C25086C2300F150BB /* 许嵩(Vae)-有何不可.lrc */; };
+		C86FE34B25086C2400F150BB /* 陈芳语-爱你.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33D25086C2300F150BB /* 陈芳语-爱你.lrc */; };
+		C86FE34C25086C2400F150BB /* 王若琳-迷宫.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33E25086C2300F150BB /* 王若琳-迷宫.lrc */; };
+		C86FE34D25086C2400F150BB /* 苏琛-拾忆.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE33F25086C2300F150BB /* 苏琛-拾忆.lrc */; };
+		C86FE34E25086C2400F150BB /* 音阙诗听-红昭愿.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE34025086C2300F150BB /* 音阙诗听-红昭愿.lrc */; };
+		C86FE34F25086C2400F150BB /* 汪苏泷-追光者.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE34125086C2300F150BB /* 汪苏泷-追光者.lrc */; };
+		C86FE35025086C2400F150BB /* G2er-还有我.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE34225086C2400F150BB /* G2er-还有我.lrc */; };
+		C86FE35125086C2400F150BB /* 阿悄-死皮赖脸.lrc in Resources */ = {isa = PBXBuildFile; fileRef = C86FE34325086C2400F150BB /* 阿悄-死皮赖脸.lrc */; };
+		C86FE3542508875C00F150BB /* GCAudioLyricsTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = C86FE3532508875C00F150BB /* GCAudioLyricsTableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +104,22 @@
 		C8548E7F25022A4D002298AD /* UIView+Addtion.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Addtion.m"; sourceTree = "<group>"; };
 		C8548E812505C436002298AD /* GCCoverImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCCoverImageView.h; sourceTree = "<group>"; };
 		C8548E822505C436002298AD /* GCCoverImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCCoverImageView.m; sourceTree = "<group>"; };
+		C86FE33625086C2300F150BB /* 梦涵-17岁.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "梦涵-17岁.lrc"; sourceTree = "<group>"; };
+		C86FE33725086C2300F150BB /* 徐良-321对不起.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "徐良-321对不起.lrc"; sourceTree = "<group>"; };
+		C86FE33825086C2300F150BB /* 九块钱-颓.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "九块钱-颓.lrc"; sourceTree = "<group>"; };
+		C86FE33925086C2300F150BB /* 权志龙-MISSING YOU.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "权志龙-MISSING YOU.lrc"; sourceTree = "<group>"; };
+		C86FE33A25086C2300F150BB /* 莫文蔚-慢慢喜欢你.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "莫文蔚-慢慢喜欢你.lrc"; sourceTree = "<group>"; };
+		C86FE33B25086C2300F150BB /* en-嚣张.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "en-嚣张.lrc"; sourceTree = "<group>"; };
+		C86FE33C25086C2300F150BB /* 许嵩(Vae)-有何不可.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "许嵩(Vae)-有何不可.lrc"; sourceTree = "<group>"; };
+		C86FE33D25086C2300F150BB /* 陈芳语-爱你.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "陈芳语-爱你.lrc"; sourceTree = "<group>"; };
+		C86FE33E25086C2300F150BB /* 王若琳-迷宫.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "王若琳-迷宫.lrc"; sourceTree = "<group>"; };
+		C86FE33F25086C2300F150BB /* 苏琛-拾忆.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "苏琛-拾忆.lrc"; sourceTree = "<group>"; };
+		C86FE34025086C2300F150BB /* 音阙诗听-红昭愿.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "音阙诗听-红昭愿.lrc"; sourceTree = "<group>"; };
+		C86FE34125086C2300F150BB /* 汪苏泷-追光者.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "汪苏泷-追光者.lrc"; sourceTree = "<group>"; };
+		C86FE34225086C2400F150BB /* G2er-还有我.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "G2er-还有我.lrc"; sourceTree = "<group>"; };
+		C86FE34325086C2400F150BB /* 阿悄-死皮赖脸.lrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "阿悄-死皮赖脸.lrc"; sourceTree = "<group>"; };
+		C86FE3522508875C00F150BB /* GCAudioLyricsTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCAudioLyricsTableView.h; sourceTree = "<group>"; };
+		C86FE3532508875C00F150BB /* GCAudioLyricsTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCAudioLyricsTableView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +157,7 @@
 				C8548DC92501EFF7002298AD /* AppDelegate.m */,
 				C8548DCE2501EFF7002298AD /* ViewController.h */,
 				C8548DCF2501EFF7002298AD /* ViewController.m */,
-				C8548E7A25022686002298AD /* AudioResource.plist */,
+				C86FE33425086B5900F150BB /* Resource */,
 				C8548DD12501EFF7002298AD /* Main.storyboard */,
 				C8548DD42501EFFB002298AD /* Assets.xcassets */,
 				C8548DD62501EFFB002298AD /* LaunchScreen.storyboard */,
@@ -166,6 +197,8 @@
 				C8548E5625020FEA002298AD /* GCAudioPlayViewController.m */,
 				C8548E582502102B002298AD /* GCAudioPlayNarrowView.h */,
 				C8548E592502102B002298AD /* GCAudioPlayNarrowView.m */,
+				C86FE3522508875C00F150BB /* GCAudioLyricsTableView.h */,
+				C86FE3532508875C00F150BB /* GCAudioLyricsTableView.m */,
 				C8548E812505C436002298AD /* GCCoverImageView.h */,
 				C8548E822505C436002298AD /* GCCoverImageView.m */,
 				C8548E65250215CA002298AD /* GCPlayProgressView.h */,
@@ -190,6 +223,36 @@
 				C8548DE42501F205002298AD /* Tools */,
 			);
 			path = GCAudioPlayer;
+			sourceTree = "<group>";
+		};
+		C86FE33425086B5900F150BB /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				C8548E7A25022686002298AD /* AudioResource.plist */,
+				C86FE33525086B6C00F150BB /* LRC */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		C86FE33525086B6C00F150BB /* LRC */ = {
+			isa = PBXGroup;
+			children = (
+				C86FE34325086C2400F150BB /* 阿悄-死皮赖脸.lrc */,
+				C86FE33D25086C2300F150BB /* 陈芳语-爱你.lrc */,
+				C86FE33825086C2300F150BB /* 九块钱-颓.lrc */,
+				C86FE33625086C2300F150BB /* 梦涵-17岁.lrc */,
+				C86FE33A25086C2300F150BB /* 莫文蔚-慢慢喜欢你.lrc */,
+				C86FE33925086C2300F150BB /* 权志龙-MISSING YOU.lrc */,
+				C86FE33F25086C2300F150BB /* 苏琛-拾忆.lrc */,
+				C86FE34125086C2300F150BB /* 汪苏泷-追光者.lrc */,
+				C86FE33E25086C2300F150BB /* 王若琳-迷宫.lrc */,
+				C86FE33725086C2300F150BB /* 徐良-321对不起.lrc */,
+				C86FE33C25086C2300F150BB /* 许嵩(Vae)-有何不可.lrc */,
+				C86FE34025086C2300F150BB /* 音阙诗听-红昭愿.lrc */,
+				C86FE33B25086C2300F150BB /* en-嚣张.lrc */,
+				C86FE34225086C2400F150BB /* G2er-还有我.lrc */,
+			);
+			path = LRC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,9 +313,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C8548DD82501EFFB002298AD /* LaunchScreen.storyboard in Resources */,
+				C86FE34725086C2400F150BB /* 权志龙-MISSING YOU.lrc in Resources */,
+				C86FE34F25086C2400F150BB /* 汪苏泷-追光者.lrc in Resources */,
+				C86FE35125086C2400F150BB /* 阿悄-死皮赖脸.lrc in Resources */,
+				C86FE34625086C2400F150BB /* 九块钱-颓.lrc in Resources */,
+				C86FE34925086C2400F150BB /* en-嚣张.lrc in Resources */,
+				C86FE34425086C2400F150BB /* 梦涵-17岁.lrc in Resources */,
+				C86FE35025086C2400F150BB /* G2er-还有我.lrc in Resources */,
+				C86FE34825086C2400F150BB /* 莫文蔚-慢慢喜欢你.lrc in Resources */,
+				C86FE34E25086C2400F150BB /* 音阙诗听-红昭愿.lrc in Resources */,
 				C8548DD52501EFFB002298AD /* Assets.xcassets in Resources */,
+				C86FE34525086C2400F150BB /* 徐良-321对不起.lrc in Resources */,
 				C8548DD32501EFF7002298AD /* Main.storyboard in Resources */,
+				C86FE34D25086C2400F150BB /* 苏琛-拾忆.lrc in Resources */,
 				C8548E7B25022686002298AD /* AudioResource.plist in Resources */,
+				C86FE34A25086C2400F150BB /* 许嵩(Vae)-有何不可.lrc in Resources */,
+				C86FE34B25086C2400F150BB /* 陈芳语-爱你.lrc in Resources */,
+				C86FE34C25086C2400F150BB /* 王若琳-迷宫.lrc in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +348,7 @@
 				C8548DCA2501EFF7002298AD /* AppDelegate.m in Sources */,
 				C8548E4C2501F251002298AD /* XHToast.m in Sources */,
 				C8548E832505C436002298AD /* GCCoverImageView.m in Sources */,
+				C86FE3542508875C00F150BB /* GCAudioLyricsTableView.m in Sources */,
 				C8548E73250216D6002298AD /* GCAudioPlayTimeView.m in Sources */,
 				C8548E67250215CA002298AD /* GCPlayProgressView.m in Sources */,
 				C8548E502501F251002298AD /* AutoScrollLabel.m in Sources */,

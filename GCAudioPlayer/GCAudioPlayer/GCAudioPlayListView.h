@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class GCAudioPlayModel;
 
-typedef NS_ENUM(NSInteger, CFTAudioPlayerStyle) {
-    CFTAudioPlayerStyle_list = 0,       //列表顺序播放
-    CFTAudioPlayerStyle_cyclic,         //单曲循环
-    CFTAudioPlayerStyle_random          //随机播放
+typedef NS_ENUM(NSInteger, CGYAudioPlayerStyle) {
+    CGYAudioPlayerStyle_list = 0,       //列表顺序播放
+    CGYAudioPlayerStyle_cyclic,         //单曲循环
+    CGYAudioPlayerStyle_random          //随机播放
 };
 
 @interface GCAudioPlayListView : UIView
@@ -26,11 +26,11 @@ typedef NS_ENUM(NSInteger, CFTAudioPlayerStyle) {
 
 @property(nonatomic, assign) BOOL isPlaying;
 
-@property (nonatomic, assign) CFTAudioPlayerStyle playerStyle;
+@property (nonatomic, assign) CGYAudioPlayerStyle playerStyle;
 
 @property(nonatomic, copy) void(^readPlayAudio)(NSInteger currentSelectTimeListIndex,GCAudioPlayModel *model);
 
-@property(nonatomic, copy) void(^playerStyleBlock)(CFTAudioPlayerStyle playerStyle);
+@property(nonatomic, copy) void(^playerStyleBlock)(CGYAudioPlayerStyle playerStyle);
 
 @end
 

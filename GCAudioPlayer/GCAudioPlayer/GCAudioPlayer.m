@@ -42,6 +42,15 @@ static NSString *const kPlaybackLikelyToKeepUp   = @"playbackLikelyToKeepUp";
     GCAudioPlayKVOManager *_playerItemKVO;
 }
 
++ (GCAudioPlayer *)sharedPlayer {
+    static GCAudioPlayer *player = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        player = [[[self class] alloc] init];
+    });
+    return player;
+}
+
 - (instancetype)initWithAudioModel:(GCAudioPlayModel *)model {
     if (self = [super init]) {
         _currentPlayModel = model;

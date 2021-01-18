@@ -8,13 +8,13 @@
 
 #import "GCAudioPlayKVOManager.h"
 
-@interface ICKVOEntry : NSObject
+@interface CGKVOEntry : NSObject
 @property (nonatomic, weak)   NSObject *observer;
 @property (nonatomic, strong) NSString *keyPath;
 
 @end
 
-@implementation ICKVOEntry
+@implementation CGKVOEntry
 @synthesize observer;
 @synthesize keyPath;
 
@@ -57,7 +57,7 @@
                     options:options
                     context:context];
         
-        ICKVOEntry *entry = [[ICKVOEntry alloc] init];
+        CGKVOEntry *entry = [[CGKVOEntry alloc] init];
         entry.observer = observer;
         entry.keyPath  = keyPath;
         [_observerArray addObject:entry];
@@ -91,7 +91,7 @@
     __block NSObject *target = _target;
     if (target == nil) return;
     [_observerArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        ICKVOEntry *entry = obj;
+        CGKVOEntry *entry = obj;
         if (entry == nil) return;
         NSObject *observer = entry.observer;
         if (observer == nil) return;
@@ -110,7 +110,7 @@
                    forKeyPath:(NSString *)keyPath {
     __block NSInteger foundIndex = -1;
     [_observerArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        ICKVOEntry *entry = (ICKVOEntry *)obj;
+        CGKVOEntry *entry = (CGKVOEntry *)obj;
         if (entry.observer == observer &&
             [entry.keyPath isEqualToString:keyPath]) {
             foundIndex = idx;

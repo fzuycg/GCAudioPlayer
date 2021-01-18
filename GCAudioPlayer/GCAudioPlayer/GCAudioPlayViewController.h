@@ -42,18 +42,18 @@ typedef NS_ENUM(NSInteger, SlidleStatue) {
 
 @property(nonatomic, assign) NSInteger overPlayNum;         //已经播放的歌曲数
 
-@property (nonatomic, assign) CFTAudioPlayerStyle playerStyle;  //播放模式
+@property (nonatomic, assign) CGYAudioPlayerStyle playerStyle;  //播放模式
 @property (nonatomic, assign) CGFloat rate;                     //播放速率
-@property (nonatomic, assign) CFTTimingType selectTimeZone;     //定时关闭方式
+@property (nonatomic, assign) CGYTimingType selectTimeZone;     //定时关闭方式
 
 @property (nonatomic, copy) NSArray *shareArray;
 
 //关闭全屏视图按钮
-@property(nonatomic, copy) void(^closeBtnAction)(GCAudioPlayModel *currentModel, NSTimeInterval seconds,CFTTimingType selectTimeZone,BOOL isPlaying);
+@property(nonatomic, copy) void(^closeBtnAction)(GCAudioPlayModel *currentModel, NSTimeInterval seconds,CGYTimingType selectTimeZone,BOOL isPlaying);
 //上一首按钮点击回调
-@property(nonatomic, copy) void(^formerBtnAction)(CFTTimingType selectTimeZone);
+@property(nonatomic, copy) void(^formerBtnAction)(CGYTimingType selectTimeZone);
 //下一首按钮点击回调
-@property(nonatomic, copy) void(^nextBtnAction)(CFTTimingType selectTimeZone);
+@property(nonatomic, copy) void(^nextBtnAction)(CGYTimingType selectTimeZone);
 //播放按钮点击回调
 @property(nonatomic, copy) void(^playBtnAction)(BOOL buttenSeleted);
 //设置定时结束
@@ -63,11 +63,11 @@ typedef NS_ENUM(NSInteger, SlidleStatue) {
 //列表选择播放
 @property(nonatomic, copy) void(^readPlayAudio)(NSInteger currentSelectPlayListIndex,GCAudioPlayModel *model);
 //当前剩余的定时时间
-@property(nonatomic, copy) void(^currentClockTime)(NSTimeInterval seconds,CFTTimingType selectzon);
+@property(nonatomic, copy) void(^currentClockTime)(NSTimeInterval seconds,CGYTimingType selectzon);
 //定时显示
 @property(nonatomic, copy) void(^bottomBtnAction)(UIButton *button,GCAudioPlayModel *model,BOOL showNarrowView);
 //播放模式
-@property(nonatomic, copy) void(^playerStyleBlock)(CFTAudioPlayerStyle playerStyle);
+@property(nonatomic, copy) void(^playerStyleBlock)(CGYAudioPlayerStyle playerStyle);
 //播放速率
 @property(nonatomic, copy) void(^rateBlock)(CGFloat rate);
 

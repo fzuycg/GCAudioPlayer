@@ -41,7 +41,7 @@ typedef NSMutableArray<GCAudioPlayModel *> GCAudioModelArray;
 @property (nonatomic, readonly) BOOL isClosePlay; //播放器是否关闭
 
 @property (nonatomic, copy) NSArray *shareArray; //分享内容
-//@property (nonatomic, strong) CFTAudioModel *audioModel;
+//@property (nonatomic, strong) CGYAudioModel *audioModel;
 
 //当前播放缓冲进度
 @property (nonatomic, readonly) NSTimeInterval buffingProgress;

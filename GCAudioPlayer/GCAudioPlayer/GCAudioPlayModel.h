@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, copy) NSString *audioAlbum;       //专辑
 
+@property (nonatomic, copy) NSString *audioLyrics;      //专辑
+
 @property (nonatomic, assign) NSInteger audioLength;    //音频长度
 
 @property (nonatomic, assign) NSInteger isCurrentPlay;  //当前播放 1 是播放 0 不需要当前播放
